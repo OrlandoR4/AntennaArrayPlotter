@@ -1,0 +1,7 @@
+tempCodeRunnerFile.py
+build/
+dist/
+.vscode/
+lib/
+__pycache__/
+AntennaArrayPlotter.spec
