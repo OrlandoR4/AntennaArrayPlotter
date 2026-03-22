@@ -33,8 +33,8 @@ Run the application directly:
 python main.py
 ```
 
-Download (Windows)
-A pre-compiled Windows executable is available on the Releases page — no Python installation required. Download AntennaArrayPlotter.exe and run it directly.
+## Download (Windows)
+A pre-compiled Windows executable is available on the [Releases](https://github.com/OrlandoR4/AntennaArrayPlotter/releases) page — no Python installation required. Download AntennaArrayPlotter.exe and run it directly.
 
 ### Adding Elements
 
