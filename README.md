@@ -22,7 +22,7 @@ A desktop application for visualizing and analyzing the radiation patterns of li
 Install dependencies with:
 
 ```bash
-pip install PyQt6 matplotlib numpy scipy
+python -m pip install PyQt6 matplotlib numpy scipy
 ```
 
 ## Usage
@@ -68,7 +68,7 @@ python build.py
 The executable will be output to the `dist/` folder. Requires PyInstaller:
 
 ```bash
-pip install pyinstaller
+python -m pip install pyinstaller
 ```
 
 ## File Structure
