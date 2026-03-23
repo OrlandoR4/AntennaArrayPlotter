@@ -250,7 +250,7 @@ class PatternPlotCanvas(FigureCanvasQTAgg):
         ## HPBW Calculations
         af_magnitude_theta_hp = af_magnitude_theta / np.max(af_magnitude_theta) - (1.0/np.sqrt(2.0))
         af_hp_crossings_indx = np.where( np.diff(np.sign(af_magnitude_theta_hp)) )[0]
-        af_maxes_indx = np.where(af_magnitude_theta - np.max(af_magnitude_theta) > -1e-2)[0]
+        af_maxes_indx = np.where(af_magnitude_theta - np.max(af_magnitude_theta) > -1e-12)[0]
 
         af_hp_crossings_indx = self.clusterIndices(af_hp_crossings_indx)
         af_maxes_indx = self.clusterIndices(af_maxes_indx)
@@ -354,6 +354,9 @@ class PatternPlotCanvas(FigureCanvasQTAgg):
 
         # For each beam, find the two HP crossings that bracket it
         hpbws = []
+
+        # print(f'MAX: {np.round(np.rad2deg(full_maxes), 2)}\nHPS: {np.round(np.rad2deg(full_hps), 2)}\n')
+
         for max_angle in full_maxes:
             left_crossings  = full_hps[full_hps < max_angle]
             right_crossings = full_hps[full_hps > max_angle]
